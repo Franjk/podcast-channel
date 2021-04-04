@@ -1,0 +1,47 @@
+#episodes {
+  background: linear-gradient(180deg, $color-primary, $color-primary-dark);
+  color: $color-light;
+  clip-path: polygon(0 24px, 100% 0%, 100% calc(100% - 24px), 0% 100%);
+  padding-top: 64px;
+  padding-right: 11px;
+  padding-bottom: 143.5px;
+  padding-left: 16px;
+
+  .section-title {
+    margin-bottom: 21px;
+  }
+
+  iframe {
+    min-height: 193px;
+    margin-bottom: 11px;
+    margin-left: -5px;
+    width: 298px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  #episodes {
+    padding-top: 186px;
+    padding-left: 200px;
+    padding-right: 100px;
+
+    clip-path: polygon(0 128px, 100% 0%, 100% calc(100% - 128px), 0% 100%);
+
+    .section-title {
+      margin-bottom: 26px;
+    }
+
+    .podcast-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 72px;
+      margin-left: -100px;
+    }
+
+    iframe {
+      min-height: 234px;
+      width: 100%;
+    }
+  }
+}

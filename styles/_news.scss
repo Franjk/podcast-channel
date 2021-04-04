@@ -1,0 +1,36 @@
+#news {
+  padding-top: 64px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 67px;
+  background: linear-gradient(180deg, $color-primary, $color-primary-dark);
+  color: $color-light;
+  clip-path: polygon(0 24px, 100% 0%, 100% 100%, 0% 100%);
+
+  .section-title {
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 36px;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  #news {
+    padding-top: 213px;
+    padding-bottom: 151px;
+    clip-path: polygon(0 128px, 100% 0%, 100% 100%, 0% 100%);
+    text-align: center;
+
+    .section-title {
+      font-size: 48px;
+      line-height: 62px;
+    }
+
+    .btn {
+      width: 345px;
+      height: 56px;
+    }
+  }
+}

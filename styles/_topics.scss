@@ -1,0 +1,69 @@
+#topics {
+  padding-top: 48px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 42px;
+
+  .section-title {
+    margin-bottom: 24px;
+  }
+
+  .topic-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .topic {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 49px;
+  }
+
+  .topic:last-child {
+    margin-bottom: 0;
+  }
+
+  .topic-img {
+    height: 104px;
+    width: 104px;
+  }
+
+  .topic-title {
+    font-family: 'IBM Plex Sans', monospace;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+    text-align: center;
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  #topics {
+    padding-top: 64px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 34px;
+
+    .section-title {
+      margin-bottom: 56px;
+    }
+
+    .topic-container {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+    }
+
+    .topic {
+      width: 260px;
+      margin: 0;
+    }
+  }
+
+}

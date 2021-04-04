@@ -1,0 +1,35 @@
+footer {
+  padding-top: 24px;
+  padding-left: 46px;
+  padding-right: 46px;
+  padding-bottom: 31px;
+
+  .icon-group {
+    // border: 1px solid green;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    i {
+      font-size: 16px;
+      line-height: 28px;
+      // border: 1px solid red;
+    }
+  }
+}
+
+@media (min-width: $desktop-min-width) {
+  footer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+
+    padding-top: 36px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    .icon-group {
+      gap: 36px;
+    }
+  }
+}
