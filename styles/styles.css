@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 header {
@@ -31,37 +30,33 @@ nav .logo {
   width: 24px;
 }
 
-#menu-toggle {
+.menu-toggle {
   display: inline-block;
   position: absolute;
   top: 16px;
   right: 19px;
-  border: 1px solid red;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  user-select: none;
 }
 
-#menu-toggle a {
+.menu-toggle a {
   text-decoration: none;
   color: #ffffff;
-  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 
-#menu-toggle a:hover {
+.menu-toggle a:hover {
   color: #00f3bb;
   text-decoration: line-through;
   font-weight: 500;
 }
 
-#menu-toggle a:active {
+.menu-toggle a:active {
+  color: #060a24;
   color: rgba(6, 10, 36, 0.56);
   text-decoration: line-through;
 }
 
-#menu-toggle input {
+.menu-toggle input {
   display: block;
   width: 30px;
   height: 21px;
@@ -69,13 +64,10 @@ nav .logo {
   left: -6px;
   cursor: pointer;
   opacity: 0;
-  /* hide this */
   z-index: 20;
-  /* and place it over the hamburger */
-  -webkit-touch-callout: none;
 }
 
-#menu-toggle span {
+.menu-toggle span {
   display: block;
   width: 18px;
   height: 2px;
@@ -84,49 +76,38 @@ nav .logo {
   background: #060a24;
   border-radius: 3px;
   z-index: 10;
-  -webkit-transform-origin: 4px 0px;
-          transform-origin: 4px 0px;
-  -webkit-transform-origin: 12px 0px;
-          transform-origin: 12px 0px;
-  -webkit-transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transform-origin: 4px 0;
+  transform-origin: 12px 0;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease, -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
-#menu-toggle span:first-child {
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+.menu-toggle span:first-child {
+  transform-origin: 0 0;
 }
 
-#menu-toggle span:nth-last-child(2) {
-  -webkit-transform-origin: 0% 100%;
-          transform-origin: 0% 100%;
+.menu-toggle span:nth-last-child(2) {
+  transform-origin: 0 100%;
 }
 
-#menu-toggle input:checked ~ span {
+.menu-toggle input:checked ~ span {
   opacity: 1;
-  -webkit-transform: rotate(45deg) translate(6.5px, 3px);
-          transform: rotate(45deg) translate(6.5px, 3px);
+  transform: rotate(45deg) translate(6.5px, 3px);
 }
 
-#menu-toggle input:checked ~ span:nth-last-child(3) {
+.menu-toggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
-  -webkit-transform: rotate(0deg) scale(0.2, 0.2);
-          transform: rotate(0deg) scale(0.2, 0.2);
+  transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menu-toggle input:checked ~ span:nth-last-child(2) {
-  -webkit-transform: rotate(-45deg) translate(4px, 4px);
-          transform: rotate(-45deg) translate(4px, 4px);
+.menu-toggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(4px, 4px);
 }
 
-#menu-toggle input:checked ~ ul {
-  -webkit-transform: none;
-          transform: none;
+.menu-toggle input:checked ~ ul {
+  transform: none;
 }
 
-#menu {
+.menu {
   position: fixed;
   width: 100vw;
   padding: 16px 0 0 16px;
@@ -135,18 +116,13 @@ nav .logo {
   left: 0;
   background: #0000ec;
   list-style-type: none;
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
-  -webkit-transform: translate(0, -100%);
-          transform: translate(0, -100%);
-  -webkit-transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  transform-origin: 0 0;
+  transform: translate(0, -100%);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), -webkit-transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
   color: #ffffff;
 }
 
-#menu li {
+.menu li {
   margin: 24px 0;
   font-family: 'IBM Plex Mono', monospace;
   line-height: 28px;
@@ -154,34 +130,24 @@ nav .logo {
   font-weight: 400;
 }
 
-#menu li:first-child {
+.menu li:first-child {
   margin-top: 0;
 }
 
-#menu-desktop {
+.menu-desktop {
   display: none;
 }
 
 @media (min-width: 768px) {
-  #menu-toggle {
+  .menu-toggle {
     display: none;
   }
   nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
     height: 80px;
     padding-left: 100px;
     padding-right: 100px;
@@ -190,287 +156,228 @@ nav .logo {
     height: 36px;
     width: 36px;
   }
-  #menu-desktop {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .menu-desktop {
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 48px;
     list-style: none;
   }
-  #menu-desktop li {
+  .menu-desktop li {
     font-family: 'IBM Plex Mono', monospace;
     line-height: 28px;
     font-size: 16px;
     font-weight: 400;
   }
-  #menu-desktop a {
+  .menu-desktop a {
     text-decoration: none;
     color: #060a24;
-    -webkit-transition: color 0.3s ease;
     transition: color 0.3s ease;
   }
-  #menu-desktop a:hover {
+  .menu-desktop a:hover {
     color: #00f3bb;
     text-decoration: line-through;
     font-weight: 500;
   }
-  #menu-desktop a:active {
+  .menu-desktop a:active {
+    color: #060a24;
     color: rgba(6, 10, 36, 0.56);
     text-decoration: line-through;
   }
 }
 
-#introduction {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 24px;
-  padding-top: 73px;
+.section-introduction {
+  padding: 73px 16px 24px 16px;
 }
 
-#introduction .section-title {
+.section-introduction .section-title {
   margin-bottom: 16px;
 }
 
-#introduction p {
+.section-introduction p {
   margin-bottom: 36px;
   max-width: 628px;
 }
 
 @media (min-width: 768px) {
-  #introduction {
-    padding-top: 200px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 5px;
+  .section-introduction {
+    padding: 200px 200px 5px 200px;
   }
-  #introduction br {
+  .section-introduction br {
     display: none;
   }
-  #introduction .section-title {
+  .section-introduction .section-title {
     font-size: 64px;
   }
-  #introduction .btn {
+  .section-introduction .btn {
     width: 226px;
     height: 56px;
   }
 }
 
-#episodes {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0000ec), to(#0000a3));
+.section-episodes {
   background: linear-gradient(180deg, #0000ec, #0000a3);
   color: #ffffff;
-  -webkit-clip-path: polygon(0 24px, 100% 0%, 100% calc(100% - 24px), 0% 100%);
-          clip-path: polygon(0 24px, 100% 0%, 100% calc(100% - 24px), 0% 100%);
-  padding-top: 64px;
-  padding-right: 11px;
-  padding-bottom: 143.5px;
-  padding-left: 16px;
+  clip-path: polygon(0 24px, 100% 0%, 100% calc(100% - 24px), 0% 100%);
+  padding: 64px 11px 143.5px 16px;
 }
 
-#episodes .section-title {
+.section-episodes .section-title {
   margin-bottom: 21px;
 }
 
-#episodes iframe {
+.section-episodes iframe {
   min-height: 193px;
   margin-bottom: 11px;
   margin-left: -5px;
   width: 298px;
+  background-color: transparent;
+  border: none;
 }
 
 @media (min-width: 768px) {
-  #episodes {
+  .section-episodes {
     padding-top: 186px;
     padding-left: 200px;
     padding-right: 100px;
-    -webkit-clip-path: polygon(0 128px, 100% 0%, 100% calc(100% - 128px), 0% 100%);
-            clip-path: polygon(0 128px, 100% 0%, 100% calc(100% - 128px), 0% 100%);
+    clip-path: polygon(0 128px, 100% 0%, 100% calc(100% - 128px), 0% 100%);
   }
-  #episodes .section-title {
+  .section-episodes .section-title {
     margin-bottom: 26px;
   }
-  #episodes .podcast-container {
-    display: -ms-grid;
+  .section-episodes .podcast-container {
     display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 72px;
     margin-left: -100px;
   }
-  #episodes iframe {
+  .section-episodes iframe {
     min-height: 234px;
     width: 100%;
   }
 }
 
-#from {
+.section-from {
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 30px;
 }
 
-#from .container {
+.section-from .container {
   position: relative;
   top: -116px;
   margin-bottom: calc(-116px);
 }
 
-#from img {
+.section-from img {
   width: 100%;
 }
 
-#from .section-title {
+.section-from .section-title {
   margin-bottom: 8px;
 }
 
 @media (min-width: 768px) {
-  #from {
+  .from {
     padding-left: 200px;
     padding-right: 200px;
   }
-  #from .section-title {
+  .from .section-title {
     margin-bottom: 24px;
   }
 }
 
 @media (min-width: 1200px) {
-  #from .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
+  .section-from .container {
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
     gap: 62.4px;
   }
-  #from .img-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 457.6px;
-            flex: 1 1 457.6px;
+  .section-from .img-container {
+    flex: 1 1 457.6px;
   }
-  #from .title-container {
-    -webkit-box-flex: 1;
-        -ms-flex: 1 1 468px;
-            flex: 1 1 468px;
+  .section-from .title-container {
+    flex: 1 1 468px;
   }
 }
 
-#guests {
+.section-guests {
   padding-top: 24px;
 }
 
-#guests .section-title {
+.section-guests .section-title {
   padding-left: 16px;
   padding-right: 16px;
   margin-bottom: 14px;
 }
 
-#guests .galery {
-  display: -ms-grid;
+.section-guests .galery {
   display: grid;
   margin: 0;
-  -webkit-box-pack: stretch;
-      -ms-flex-pack: stretch;
-          justify-content: stretch;
+  justify-content: stretch;
 }
 
-#guests .galery-img {
-  -o-object-fit: contain;
-     object-fit: contain;
+.section-guests .galery-img {
+  object-fit: contain;
   width: 100%;
 }
 
 @media (min-width: 768px) {
-  #guests .section-title {
+  .section-guests .section-title {
     padding-top: 64px;
     padding-left: 200px;
     margin-bottom: 36px;
   }
-  #guests .galery {
-    -ms-grid-columns: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr;
-    -ms-grid-rows: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+  .section-guests .galery {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     gap: 0;
   }
-  #guests .galery-img {
+  .section-guests .galery-img {
     max-width: 100%;
     height: unset;
   }
 }
 
-#topics {
-  padding-top: 48px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 42px;
+.section-topics {
+  padding: 48px 16px 42px 16px;
 }
 
-#topics .section-title {
+.section-topics .section-title {
   margin-bottom: 24px;
 }
 
-#topics .topic-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.section-topics .topic-container {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
 }
 
-#topics .topic {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.section-topics .topic {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
   gap: 13px;
   margin-bottom: 49px;
 }
 
-#topics .topic:last-child {
+.section-topics .topic:last-child {
   margin-bottom: 0;
 }
 
-#topics .topic-img {
+.section-topics .topic-img {
   height: 104px;
   width: 104px;
 }
 
-#topics .topic-title {
+.section-topics .topic-title {
   font-family: 'IBM Plex Sans', monospace;
   font-size: 24px;
   font-weight: 600;
@@ -479,46 +386,31 @@ nav .logo {
 }
 
 @media (min-width: 768px) {
-  #topics {
-    padding-top: 64px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 34px;
+  .section-topics {
+    padding: 64px 200px 34px 200px;
   }
-  #topics .section-title {
+  .section-topics .section-title {
     margin-bottom: 56px;
   }
-  #topics .topic-container {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+  .section-topics .topic-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
   }
-  #topics .topic {
+  .section-topics .topic {
     width: 260px;
     margin: 0;
   }
 }
 
-#news {
-  padding-top: 64px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 67px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#0000ec), to(#0000a3));
+.section-news {
+  padding: 64px 16px 67px 16px;
   background: linear-gradient(180deg, #0000ec, #0000a3);
   color: #ffffff;
-  -webkit-clip-path: polygon(0 24px, 100% 0%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 24px, 100% 0%, 100% 100%, 0% 100%);
+  clip-path: polygon(0 24px, 100% 0%, 100% 100%, 0% 100%);
 }
 
-#news .section-title {
+.section-news .section-title {
   font-size: 36px;
   line-height: 42px;
   font-weight: 400;
@@ -527,41 +419,30 @@ nav .logo {
 }
 
 @media (min-width: 768px) {
-  #news {
+  .section-news {
     padding-top: 213px;
     padding-bottom: 151px;
-    -webkit-clip-path: polygon(0 128px, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 128px, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 128px, 100% 0%, 100% 100%, 0% 100%);
     text-align: center;
   }
-  #news .section-title {
+  .section-news .section-title {
     font-size: 48px;
     line-height: 62px;
   }
-  #news .btn {
+  .section-news .btn {
     width: 345px;
     height: 56px;
   }
 }
 
 footer {
-  padding-top: 24px;
-  padding-left: 46px;
-  padding-right: 46px;
-  padding-bottom: 31px;
+  padding: 24px 46px 31px 46px;
 }
 
 footer .icon-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 footer .icon-group i {
@@ -571,16 +452,9 @@ footer .icon-group i {
 
 @media (min-width: 768px) {
   footer {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-flow: row nowrap;
+    justify-content: space-between;
     padding-top: 36px;
     padding-left: 100px;
     padding-right: 100px;
@@ -598,7 +472,7 @@ body {
   margin: 0;
   padding: 0;
   max-width: 100vw;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   background: #ffffff;
   color: #060a24;
 }
@@ -606,7 +480,7 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "IBM Plex Sans", monospace;
+  font-family: 'IBM Plex Sans', monospace;
   color: #060a24;
   font-weight: 400;
   font-size: 36px;
@@ -646,26 +520,24 @@ a:active {
   padding-top: 13px;
   padding-bottom: 13px;
   background: #00f3bb;
-  font-family: "IBM Plex Mono", monospace;
+  font-family: 'IBM Plex Mono', monospace;
   font-size: 16px;
   font-weight: 500;
   color: #060a24;
   letter-spacing: 0;
   text-align: center;
-  outline: none;
   border: none;
   border-radius: 0;
   cursor: pointer;
 }
 
-.btn:active {
-  outline: none;
+.btn:focus {
+  outline: 0.5px solid transparent;
 }
 
 .btn:hover {
   color: #ffffff;
   background: #00f0b8;
-  background: -webkit-gradient(linear, left top, right top, from(#00f3bb), to(#0000ec));
   background: linear-gradient(90deg, #00f3bb, #0000ec);
 }
 

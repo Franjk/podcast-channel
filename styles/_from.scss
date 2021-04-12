@@ -1,4 +1,4 @@
-#from {
+.section-from {
   padding-left: 16px;
   padding-right: 16px;
   padding-bottom: 30px;
@@ -7,7 +7,6 @@
     position: relative;
     top: -116px;
     margin-bottom: calc(-116px);
-
   }
 
   img {
@@ -20,20 +19,18 @@
 }
 
 @media (min-width: $desktop-min-width) {
-  #from {
+  .from {
     padding-left: 200px;
     padding-right: 200px;
-   
+
     .section-title {
       margin-bottom: 24px;
     }
-
   }
 }
 
-
 @media (min-width: $desktop-min-width-xl) {
-  #from {
+  .section-from {
     .container {
       display: flex;
       flex-direction: row;
@@ -43,14 +40,13 @@
       align-content: center;
       gap: 62.4px;
     }
-  
+
     .img-container {
       flex: 1 1 457.6px;
     }
-  
+
     .title-container {
       flex: 1 1 468px;
     }
-
   }
 }

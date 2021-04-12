@@ -1,8 +1,5 @@
-#news {
-  padding-top: 64px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 67px;
+.section-news {
+  padding: 64px 16px 67px 16px;
   background: linear-gradient(180deg, $color-primary, $color-primary-dark);
   color: $color-light;
   clip-path: polygon(0 24px, 100% 0%, 100% 100%, 0% 100%);
@@ -17,7 +14,7 @@
 }
 
 @media (min-width: $desktop-min-width) {
-  #news {
+  .section-news {
     padding-top: 213px;
     padding-bottom: 151px;
     clip-path: polygon(0 128px, 100% 0%, 100% 100%, 0% 100%);

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg" href="images/logo.svg"/>
+    <link rel="icon" type="image/svg" href="images/logo.svg" />
     <link rel="stylesheet" href="./styles/styles.css" />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
@@ -14,14 +14,14 @@
   </head>
   <body>
     <header>
-      <div id="menu-toggle">
+      <div id="menu-toggle" class="menu-toggle">
         <input type="checkbox" />
 
         <span></span>
         <span></span>
         <span></span>
 
-        <ul id="menu">
+        <ul id="menu" class="menu">
           <li><a href="#episodes">EPISODIOS</a></li>
           <li><a href="#from">NOSOTROS</a></li>
           <li><a href="#guests">ENTREVISTAS</a></li>
@@ -32,7 +32,7 @@
         <a href="">
           <img class="logo" src="./images/logo.svg" alt="logo de la compañía" />
         </a>
-        <ul id="menu-desktop">
+        <ul id="menu-desktop" class="menu-desktop">
           <li><a href="#episodes">EPISODIOS</a></li>
           <li><a href="#from">NOSOTROS</a></li>
           <li><a href="#guests">ENTREVISTAS</a></li>
@@ -40,61 +40,53 @@
         </ul>
       </nav>
     </header>
-    <section id="introduction">
+    <section id="introduction" class="section-introduction">
       <h1 class="section-title">
-        Hello <span class="text-strike">world</span> <br class="only-mobile"/>pale blue dot<span class="text-primary">.</span>
+        Hello <span class="text-strike">world</span>
+        <br class="only-mobile" />pale blue dot<span class="text-primary"
+          >.</span
+        >
       </h1>
       <p class="only-mobile">
-        Un podcast que explora el mundo de la programación. Nuevos episodios, todos los jueves cada 15 días.
+        Un podcast que explora el mundo de la programación. Nuevos episodios,
+        todos los jueves cada 15 días.
       </p>
       <p class="only-desktop">
-        El portal de podcasts que explora el mundo de la programación y la tecnología. Nuevos episodios, todos los jueves cada 15 días.
+        El portal de podcasts que explora el mundo de la programación y la
+        tecnología. Nuevos episodios, todos los jueves cada 15 días.
       </p>
       <button class="btn">CONOCÉ MÁS</button>
     </section>
-    <section id="episodes">
+    <section id="episodes" class="section-episodes">
       <h2 class="section-title text-light">Episodios</h2>
 
       <div class="podcast-container">
-          <iframe
-            src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt"
-            width="100%"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
+        <iframe
+          src="https://open.spotify.com/embed-podcast/show/2ySVrxGkN6n6frMTo9Nsrt"
+          allow="encrypted-media"
+        ></iframe>
 
-          <iframe
-            class="podcast"
-            src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby"
-            width="100%"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
+        <iframe
+          class="podcast"
+          src="https://open.spotify.com/embed-podcast/show/4kYCRYJ3yK5DQbP5tbfZby"
+          allow="encrypted-media"
+        ></iframe>
 
-          <iframe
-            class="podcast"
-            src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv"
-            width="100%"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
+        <iframe
+          class="podcast"
+          src="https://open.spotify.com/embed-podcast/show/5JxcIaIkN8zx3Zy7yD9snv"
+          allow="encrypted-media"
+        ></iframe>
 
-          <iframe
-            class="podcast"
-            src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
-            width="100%"
-            frameborder="0"
-            allowtransparency="true"
-            allow="encrypted-media"
-          ></iframe>
+        <iframe
+          class="podcast"
+          src="https://open.spotify.com/embed-podcast/show/2Iibd5A6R7mxkCm4NwNmUn"
+          allow="encrypted-media"
+        ></iframe>
       </div>
     </section>
-    <section id="from">
+    <section id="from" class="section-from">
       <div class="container">
-
         <div class="img-container">
           <img src="./images/phone.png" alt="celular con artículo" />
         </div>
@@ -102,8 +94,8 @@
           <h2 class="section-title">De dónde venimos</h2>
           <p>
             Our posturings, our imagined self-importance, the delusion that we
-            have some privileged position in the Universe, are challenged by this
-            point of pale light.
+            have some privileged position in the Universe, are challenged by
+            this point of pale light.
           </p>
           <p>
             Our planet is a lonely speck in the great enveloping cosmic dark. In
@@ -111,10 +103,9 @@
             come from elsewhere to save us from ourselves.
           </p>
         </div>
-
       </div>
     </section>
-    <section id="guests">
+    <section id="guests" class="section-guests">
       <h2 class="section-title">Invitadas/os estelares</h2>
       <div class="galery">
         <img
@@ -149,7 +140,7 @@
         />
       </div>
     </section>
-    <section id="topics">
+    <section id="topics" class="section-topics">
       <h2 class="section-title">Algunos de nuestros temas</h2>
       <div class="topic-container">
         <div class="topic">
@@ -186,26 +177,26 @@
         </div>
       </div>
     </section>
-    <section id="news">
+    <section id="news" class="section-news">
       <h2 class="section-title text-light">¿Querés las últimas novedades?</h2>
       <button class="btn">ESCUCHÁ LOS EPISODIOS</button>
     </section>
     <footer>
       <p class="text-copyright">&copy; 2019&mdash; Hello blue pale dot</p>
       <div class="icon-group">
-        <a href="#">
+        <a href="https://www.spotify.com">
           <i class="fab fa-spotify"></i>
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com">
           <i class="fab fa-instagram"></i>
         </a>
-        <a href="#">
+        <a href="https://twitter.com">
           <i class="fab fa-twitter"></i>
         </a>
-        <a href="#">
+        <a href="https://www.facebook.com/">
           <i class="fab fa-facebook"></i>
         </a>
-        <a href="#">
+        <a href="https://web.telegram.org">
           <i class="fab fa-telegram"></i>
         </a>
       </div>

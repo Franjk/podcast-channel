@@ -1,8 +1,5 @@
-#introduction {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 24px;
-  padding-top: 73px;
+.section-introduction {
+  padding: 73px 16px 24px 16px;
 
   .section-title {
     margin-bottom: 16px;
@@ -15,11 +12,8 @@
 }
 
 @media (min-width: $desktop-min-width) {
-  #introduction {
-    padding-top: 200px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 5px;
+  .section-introduction {
+    padding: 200px 200px 5px 200px;
 
     br {
       display: none;
@@ -33,6 +27,5 @@
       width: 226px;
       height: 56px;
     }
-    
   }
 }

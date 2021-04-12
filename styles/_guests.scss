@@ -1,4 +1,4 @@
-#guests {
+.section-guests {
   padding-top: 24px;
 
   .section-title {
@@ -21,7 +21,7 @@
 }
 
 @media (min-width: $desktop-min-width) {
-  #guests {
+  .section-guests {
     .section-title {
       padding-top: 64px;
       padding-left: 200px;

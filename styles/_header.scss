@@ -10,7 +10,7 @@ nav {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 44px; //44
+  height: 44px;
   background: $color-light;
   padding-left: 16px;
   padding-bottom: 11px;
@@ -23,12 +23,11 @@ nav {
   }
 }
 
-#menu-toggle {
+.menu-toggle {
   display: inline-block;
   position: absolute;
   top: 16px;
   right: 19px;
-  border: 1px solid red;
   user-select: none;
 
   a {
@@ -44,6 +43,7 @@ nav {
     }
 
     &:active {
+      color: rgb(6, 10, 36);
       color: rgba(6, 10, 36, 0.56);
       text-decoration: line-through;
     }
@@ -58,16 +58,12 @@ nav {
 
     cursor: pointer;
 
-    opacity: 0; /* hide this */
-    z-index: 20; /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
+    opacity: 0;
+    z-index: 20;
   }
 
   span {
     display: block;
-    // width: 33px;
-    // height: 4px;
     width: 18px;
     height: 2px;
     margin-bottom: 3px;
@@ -78,19 +74,19 @@ nav {
 
     z-index: 10;
 
-    transform-origin: 4px 0px; //12px 0px
-    transform-origin: 12px 0px;
+    transform-origin: 4px 0; //12px 0px
+    transform-origin: 12px 0;
 
     transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
       background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
   }
 
   span:first-child {
-    transform-origin: 0% 0%;
+    transform-origin: 0 0;
   }
 
   span:nth-last-child(2) {
-    transform-origin: 0% 100%;
+    transform-origin: 0 100%;
   }
 
   input:checked ~ span {
@@ -112,7 +108,7 @@ nav {
   }
 }
 
-#menu {
+.menu {
   position: fixed;
   width: 100vw;
   padding: 16px 0 0 16px;
@@ -123,7 +119,7 @@ nav {
   background: $color-primary;
   list-style-type: none;
 
-  transform-origin: 0% 0%;
+  transform-origin: 0 0;
   transform: translate(0, -100%);
 
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -142,13 +138,12 @@ nav {
   }
 }
 
-#menu-desktop {
+.menu-desktop {
   display: none;
 }
 
 @media (min-width: $desktop-min-width) {
-
-  #menu-toggle {
+  .menu-toggle {
     display: none;
   }
 
@@ -168,7 +163,7 @@ nav {
     }
   }
 
-  #menu-desktop {
+  .menu-desktop {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -186,16 +181,17 @@ nav {
     a {
       text-decoration: none;
       color: $color-dark;
-  
+
       transition: color 0.3s ease;
-  
+
       &:hover {
         color: $color-secondary;
         text-decoration: line-through;
         font-weight: 500;
       }
-  
+
       &:active {
+        color: rgb(6, 10, 36);
         color: rgba(6, 10, 36, 0.56);
         text-decoration: line-through;
       }

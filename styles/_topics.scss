@@ -1,8 +1,5 @@
-#topics {
-  padding-top: 48px;
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 42px;
+.section-topics {
+  padding: 48px 16px 42px 16px;
 
   .section-title {
     margin-bottom: 24px;
@@ -43,11 +40,8 @@
 }
 
 @media (min-width: $desktop-min-width) {
-  #topics {
-    padding-top: 64px;
-    padding-left: 200px;
-    padding-right: 200px;
-    padding-bottom: 34px;
+  .section-topics {
+    padding: 64px 200px 34px 200px;
 
     .section-title {
       margin-bottom: 56px;
@@ -57,7 +51,6 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-
     }
 
     .topic {
@@ -65,5 +58,4 @@
       margin: 0;
     }
   }
-
 }
